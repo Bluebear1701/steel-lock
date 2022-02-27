@@ -1,10 +1,7 @@
 // Assignment code here
 //validate password function 
 var passwordlength
-var confirmspecial 
-var confirmlower
-var confirmupper
-var confirmnumber
+
 //var special characters
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", "-", ".", " < ", "=", " > ", " ? ", "@", " ^ ", "_", "~"];
 //var lower case
@@ -15,21 +12,33 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var number = ["1", "2", "3", "4", "5", "6", "7", "8","9","0"];
 
 //function to generate a random numeric value
-var randomNumber = function () {
-var value = Math.floor(Math.random() * 10) + 128
+for(var i = 0; i <randompassword.length; i++)
+var randompassword = function () {
+var password = Math.floor(Math.random() ) 
 
-return value;
+return password;
 };
 // need a comfirm for each var if, if else
 // step 1 validate number between 1 -128
 // need prompt to confirm 
+// need empty variable for the password length
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+ passwordlength = window.prompt("Choose a password lenght between 1 and 128")
+ if (passwordlength < 8 || passwordlength >128) {
+   var passwordlength = window.alert ("Incorrect length"+ passwordlength);   
+ }
+  else if (passwordlength >= 8 || passwordlength <=128)
+  var special = confirm ("Would you like to use a Special character?");
+  var lower = confirm ("Would like to use a lowercase character?");
+  var upper = confirm ("Would like to use an Uppercase character?");
+  var number = confirm ("Would you like to use Numbers?")
 
+ 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
