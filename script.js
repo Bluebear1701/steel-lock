@@ -12,16 +12,14 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var number = ["1", "2", "3", "4", "5", "6", "7", "8","9","0"];
 
 //function to generate a random numeric value
-for(var i = 0; i <randompassword.length; i++)
-var randompassword = function () {
-var password = Math.floor(Math.random() ) 
+for(var i = 0; i <= passwordlength; i++)
+var randomnumber = function () {
+var password = Math.floor(Math.random() );
+
+var passwordlength = (".");
 
 return password;
 };
-// need a comfirm for each var if, if else
-// step 1 validate number between 1 -128
-// need prompt to confirm 
-// need empty variable for the password length
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -37,6 +35,10 @@ function writePassword() {
   var lower = confirm ("Would like to use a lowercase character?");
   var upper = confirm ("Would like to use an Uppercase character?");
   var number = confirm ("Would you like to use Numbers?")
+
+  if (special && lower && upper && number) {
+    
+  }
 
  
   var password = generatePassword();
