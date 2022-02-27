@@ -13,32 +13,35 @@ var number = ["1", "2", "3", "4", "5", "6", "7", "8","9","0"];
 
 //function to generate a random numeric value
 for(var i = 0; i <= passwordlength; i++)
-var randomnumber = function () {
+var password = function () {
 var password = Math.floor(Math.random() );
 
 var passwordlength = (".");
 
-return password;
-};
 
+};
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+function generatePassword() {
+  //console.log ("button clicked")
+  return password
+}
 // Write password to the #password input
 function writePassword() {
- passwordlength = window.prompt("Choose a password lenght between 1 and 128")
+ passwordlength = window.prompt("Choose a password lenght between 8 and 128")
  if (passwordlength < 8 || passwordlength >128) {
-   var passwordlength = window.log ("Incorrect length" + passwordlength);   
+   var passwordlength = window.prompt ("Incorrect length try again");   
  }
-  else if (passwordlength >= 8 || passwordlength <=128)  
-  var special = confirm ("Would you like to use a Special character?");
-  console.log("Special" + special)
-  var lower = confirm ("Would like to use a lowercase character?");
-  console.log("Lower" + lower)
-  var upper = confirm ("Would like to use an Uppercase character?");
-  console.log("upper" + upper)
-  var number = confirm ("Would you like to use Numbers?")
-  console.log("number" + number)
+else if (passwordlength >= 8 || passwordlength <=128)  
+  var special = confirm ("Would you like to include Special characters?");
+  console.log("Special")
+  var lower = confirm ("Would like to include a lowercase character?");
+  console.log("Lower")
+  var upper = confirm ("Would like to include an Uppercase character?");
+  console.log("upper")
+  var number = confirm ("Would you like to include Numbers?")
+  console.log("number")
 
 };
 // all 4 preferences
@@ -47,7 +50,7 @@ function writePassword() {
     console.log(preferences); 
   }
 //  3 prefences 
-else if (special && lower && upper && number) {
+else if (special && lower && upper) {
   preferences = special.concat(lower, upper);
   console.log(preferences);
 } 
@@ -112,9 +115,27 @@ else if (special && lower && upper && number) {
     preferences = lower;
     console.log(preferences);
   } 
+var prefences=[]
+//alts 
+   if (lower) {
+    preferences = preferences.concat(lower);
+    console.log(preferences); 
+  }
 
-
-
+   if (upper) {
+      preferences = preferences.concat(upper);
+      console.log(preferences);
+  }
+  
+   if (number) {
+    preferences = preferences.concat(number);
+    console.log(preferences);
+  }
+  
+  if (special) {
+    preferences = preferences.concat(special);
+    console.log(preferences);
+  }
  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
