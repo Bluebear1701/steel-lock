@@ -16,3 +16,8 @@ https://bluebear1701.github.io/steel-lock/
 
 ## Screenshot added
 ![Screenshot of my website](screenshot-password.png) 
+
+## Website Credits 
+https://www.w3schools.com/
+
+https://developer.mozilla.org/
